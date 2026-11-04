@@ -65,3 +65,5 @@ h1 em{color:var(--red);font-style:italic}
 
 .camera-button{position:absolute;z-index:4;right:12px;top:calc(env(safe-area-inset-top) + 65px);border:1px solid rgba(255,255,255,.32);border-radius:5px;background:rgba(5,9,15,.62);color:#fff;padding:8px 10px;font-size:7px;letter-spacing:1px;font-weight:800;touch-action:manipulation}
 @media(orientation:landscape) and (max-height:500px){.camera-button{top:calc(env(safe-area-inset-top) + 42px);right:16px;padding:7px 9px}}
+
+.race-selectors{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px auto;max-width:330px;text-align:left}.race-selectors label{font-size:7px;letter-spacing:1px;color:#c3cad4}.race-selectors select{display:block;width:100%;margin-top:5px;background:#111a25;color:#fff;border:1px solid #485463;border-radius:4px;padding:9px 5px;font-size:8px;max-width:100%}@media(orientation:landscape) and (max-height:500px){.race-selectors{margin:7px auto;gap:6px}.race-selectors select{padding:7px 4px}.start-panel{width:min(100%,460px)}}

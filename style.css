@@ -32,7 +32,7 @@ h1 em{color:var(--red);font-style:italic}
 .control-button{border:1px solid rgba(255,255,255,.48);color:#fff;background:rgba(7,12,20,.62);backdrop-filter:blur(7px);touch-action:none;user-select:none;-webkit-user-select:none;-webkit-appearance:none;appearance:none}
 .steer{width:60px;height:60px;border-radius:50%;font-size:32px;font-weight:300}
 .brake,.throttle{height:62px;min-width:69px;border-radius:9px;font-size:8px;font-weight:900;letter-spacing:.8px}
-.throttle{background:rgba(229,43,54,.88);border-color:#ff6972;min-width:82px}.pit-button{pointer-events:auto;height:42px;min-width:48px;border-radius:8px;font-size:8px;font-weight:900;align-self:flex-end;margin-left:8px}
+.throttle{background:rgba(229,43,54,.88);border-color:#ff6972;min-width:82px}.ers-button{height:48px;min-width:46px;border-radius:8px;font-size:8px;font-weight:900;background:rgba(34,104,151,.72)}.pit-button{pointer-events:auto;height:42px;min-width:48px;border-radius:8px;font-size:8px;font-weight:900;align-self:flex-end;margin-left:8px}
 .control-button.pressed{background:#fff;color:#111;transform:scale(.95)}
 .footer{position:absolute;z-index:3;bottom:calc(env(safe-area-inset-bottom) + 6px);left:12px;right:12px;display:flex;justify-content:space-between;color:rgba(235,240,247,.58);font-size:6px;letter-spacing:1px;pointer-events:none}
 .screen-message{position:absolute;z-index:8;inset:0;display:grid;place-items:center;background:#080b12;color:#fff;font-size:10px;letter-spacing:2px;text-align:center;padding:20px}

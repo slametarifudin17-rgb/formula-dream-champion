@@ -18,7 +18,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .track-label span{color:var(--red)}
 .message{position:absolute;z-index:2;top:16%;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:1.4px;color:#fff;background:rgba(5,8,13,.62);padding:7px 10px;border:1px solid rgba(255,255,255,.15);white-space:nowrap;max-width:90%;text-align:center}
 .start-screen{position:absolute;z-index:5;inset:0;display:grid;place-items:center;padding:16px;background:radial-gradient(ellipse at 50% 45%,rgba(23,37,54,.5),rgba(3,5,9,.84))}
-.start-panel{text-align:center;padding:10px 16px;width:min(100%,460px)}.career-summary,.session-status{font-size:9px;letter-spacing:1px;color:#d4dbe4;margin:6px 0}.session-status{color:#ffcf55}.career-summary,.session-status{font-size:9px;letter-spacing:1px;color:#d4dbe4;margin:6px 0}.session-status{color:#ffcf55}
+.start-panel{text-align:center;padding:10px 16px;width:min(100%,460px)}.career-summary,.session-status{font-size:9px;letter-spacing:1px;color:#d4dbe4;margin:6px 0}.upgrade-button{margin:5px auto 8px;padding:7px 12px;border:1px solid #8e9aa8;border-radius:5px;background:rgba(16,25,37,.85);color:#f2f5f8;font-size:8px;font-weight:800;letter-spacing:1px}.session-status{color:#ffcf55}.career-summary,.session-status{font-size:9px;letter-spacing:1px;color:#d4dbe4;margin:6px 0}.session-status{color:#ffcf55}
 .eyebrow{font-size:8px;letter-spacing:2px;color:#f16a72}
 h1{font-size:clamp(39px,11vw,58px);line-height:.82;letter-spacing:-2.5px;margin:13px 0;font-weight:1000;font-style:italic}
 h1 em{color:var(--red);font-style:italic}

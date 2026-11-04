@@ -23,7 +23,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - Weather presets: sunny, cloudy, rain, heavy rain and dynamic wet/dry grip phases.
 - Instanced spectator crowd and simple grandstand placeholders.
 - Procedural synthesized engine tone and basic off-track damage/pace degradation.
-- Chase, TV-style and cockpit camera positions.
+- Chase, TV-style and cockpit camera positions, with a detailed FDC steering wheel, digital display, control buttons, driver arms, seat and halo.\n- Basic 3D safety car with flashing lights, reduced field pace, track-limits warnings and accumulated post-race time penalties.\n- Qualifying mode with best-lap timing and locally saved results.\n- Career championship points, wins, race count and a 10-round season counter stored locally.
 - iPhone home-screen web app metadata and a service worker that caches the app shell and attempts to cache Three.js for offline use.
 
 ## Remaining roadmap and known limitations

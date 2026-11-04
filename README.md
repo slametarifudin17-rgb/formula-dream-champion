@@ -33,10 +33,10 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - AI rivals use simplified corner-aware pace and lane avoidance; advanced overtaking, full collision physics and race strategy are not implemented.
 - Circuit geometry, pit lane, kerbs, elevation, buildings and grandstands are generated approximations, not surveyed replicas.
 - Weather is visual/basic grip simulation only; no puddles, spray simulation, tyre compounds or aquaplaning model.
-- Career includes locally saved championship points, race wins, driver XP/levels, credits and up to three engine upgrades. Contracts, transfers and a full AI driver championship remain future work.
+- Career includes locally saved championship points, a basic AI driver standings table, race wins, driver XP/levels, credits and up to three engine upgrades. Contracts, transfers, full season event scheduling and deeper AI driver progression remain future work.
 - DRS/ERS are simplified prototype boosts, not full FIA rule simulations.
-- Pit stop, tyre wear, safety car and track-limit penalties are simplified prototype mechanics; no tyre compounds, tyre temperature, full championship tables or race strategy yet.
-- Procedural synthesized engine tone and basic off-track damage are implemented; tyre, wind, crowd, pit crew and radio audio are not yet implemented.
+- Pit stop, tyre wear, safety car and track-limit penalties are simplified prototype mechanics; no tyre compounds, tyre temperature, full race strategy or complete official championship format yet.
+- Procedural synthesized multi-layer engine tone and tyre squeal are implemented; wind, crowd, pit crew and radio audio are not yet implemented.
 - Offline startup depends on the browser successfully caching the external Three.js module. First launch requires internet.
 - Performance, touch behavior, and installation must be verified on actual iPhone hardware. No iPhone 11 test has been performed by the developer.
 

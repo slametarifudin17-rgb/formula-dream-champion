@@ -17,7 +17,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - Basic track-following driving: throttle, brake, steering/lateral offset, track edge penalty, speed/gear/RPM HUD and three-lap session.
 - Up to 23 simple computer-controlled rival cars (24-car grid in Grand Prix/Career; no rivals in Time Trial).\n- Three game modes: Grand Prix, Career (local race/win counters saved in browser storage), and Time Trial.\n- Four race-length presets: 25%, 50%, 75%, and 100% (prototype presets of 5/10/15/20 laps).\n- Basic ERS deployment, DRS proximity/straight-zone boost logic, tyre wear indicator and manual pit-stop tyre reset.\n- Live player position calculation against the AI field.
 - Weather presets: sunny, cloudy, rain, heavy rain and dynamic wet/dry grip phases.
-- Instanced spectator crowd and simple grandstand placeholders.
+- Instanced spectator crowd and simple grandstand placeholders.\n- Procedural synthesized engine tone and basic off-track damage/pace degradation.
 - Chase, TV-style and cockpit camera positions.
 - iPhone home-screen web app metadata and a service worker that caches the app shell and attempts to cache Three.js for offline use.
 

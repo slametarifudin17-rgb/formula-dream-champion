@@ -1,0 +1,41 @@
+:root{color-scheme:dark;--red:#e52b36;--white:#f4f5f7;--muted:#9ca6b5}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#080b12;color:var(--white);font-family:Arial,Helvetica,sans-serif;touch-action:none}
+#game-root{position:relative;width:100%;height:100%;min-height:320px;overflow:hidden;background:linear-gradient(#101b2a,#080b12)}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hud{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:flex-start;justify-content:space-between;padding:calc(env(safe-area-inset-top) + 14px) 18px 12px;background:linear-gradient(180deg,rgba(4,7,12,.88),transparent)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:10px;letter-spacing:2px}
+.brand-mark{display:grid;place-items:center;background:var(--red);width:36px;height:29px;font-size:13px;font-style:italic;letter-spacing:-1px;transform:skew(-9deg)}
+.brand-name{max-width:130px;line-height:1.4}
+.hud-data{display:flex;align-items:center;gap:18px}
+.hud-cell{display:flex;flex-direction:column;gap:3px;text-align:right}
+.hud-label,.hud-unit{font-size:8px;color:var(--muted);letter-spacing:2px}
+.hud-cell strong{font-size:17px;font-variant-numeric:tabular-nums}
+.speed-cell{flex-direction:row;align-items:baseline;gap:5px}
+.speed-cell strong{font-size:30px;letter-spacing:-1px}
+.track-label{position:absolute;z-index:2;top:91px;left:18px;color:#d4d9e1;font-size:9px;letter-spacing:2px;text-shadow:0 1px 5px #000}
+.track-label span{color:var(--red)}
+.message{position:absolute;z-index:2;top:19%;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:2px;color:#fff;background:rgba(5,8,13,.55);padding:8px 12px;border:1px solid rgba(255,255,255,.12);white-space:nowrap}
+.start-screen{position:absolute;z-index:5;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 45%,rgba(23,37,54,.45),rgba(3,5,9,.78))}
+.start-panel{text-align:center;padding:24px 18px;max-width:420px}
+.eyebrow{font-size:9px;letter-spacing:3px;color:#f16a72}
+h1{font-size:clamp(42px,10vw,70px);line-height:.83;letter-spacing:-3px;margin:18px 0;font-weight:1000;font-style:italic}
+h1 em{color:var(--red);font-style:italic}
+.start-panel p{font-size:9px;letter-spacing:3px;color:#b8c0cc;margin:22px 0}
+.start-button{border:0;background:var(--red);color:white;padding:16px 28px;font-weight:900;letter-spacing:2px;font-size:12px;min-width:190px;box-shadow:0 8px 30px rgba(229,43,54,.22)}
+.start-button span{font-size:18px;margin-left:16px}
+.start-panel small{display:block;color:#7d8795;font-size:8px;letter-spacing:2px;margin-top:22px}
+.controls{position:absolute;z-index:4;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 34px);display:none;justify-content:space-between;align-items:end;padding:0 18px;pointer-events:none}
+.controls.active{display:flex}
+.steering,.pedals{display:flex;gap:10px;pointer-events:auto}
+.control-button{border:1px solid rgba(255,255,255,.38);color:#fff;background:rgba(7,12,20,.58);backdrop-filter:blur(8px);touch-action:none;user-select:none;-webkit-user-select:none}
+.steer{width:62px;height:62px;border-radius:50%;font-size:34px;font-weight:300}
+.brake,.throttle{height:64px;min-width:76px;border-radius:8px;font-size:9px;font-weight:900;letter-spacing:1px}
+.throttle{background:rgba(229,43,54,.82);border-color:#ff6972;min-width:92px}
+.control-button.pressed{background:#fff;color:#111;transform:scale(.96)}
+.footer{position:absolute;z-index:3;bottom:calc(env(safe-area-inset-bottom) + 9px);left:18px;right:18px;display:flex;justify-content:space-between;color:rgba(235,240,247,.55);font-size:7px;letter-spacing:1.3px;pointer-events:none}
+.screen-message{position:absolute;z-index:8;inset:0;display:grid;place-items:center;background:#080b12;color:#fff;font-size:11px;letter-spacing:3px}
+.screen-message.hidden{display:none}
+.error{position:absolute;z-index:10;left:12px;right:12px;bottom:12px;padding:12px;background:#5b1118;color:#fff;font-size:12px}
+@media(orientation:portrait){.track-label{top:85px}.hud{padding-left:12px;padding-right:12px}.hud-data{gap:10px}.controls{bottom:calc(env(safe-area-inset-bottom) + 28px)}.steer{width:56px;height:56px}.brake,.throttle{height:58px;min-width:66px}.throttle{min-width:82px}}
+@media(min-width:800px){.controls{padding:0 5vw}.steer{width:76px;height:76px}.brake,.throttle{height:76px;min-width:110px;font-size:11px}}

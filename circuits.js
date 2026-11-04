@@ -15,6 +15,7 @@ export const CIRCUITS = [
 {id:"madrid",name:"SPAIN · MADRID",country:"Spain",style:"street",seed:14,weather:"dry",feature:"New-generation city circuit concept"},
 {id:"baku",name:"AZERBAIJAN · BAKU",country:"Azerbaijan",style:"street",seed:15,weather:"windy",feature:"Long boulevard and narrow old-town section"},
 {id:"bahrain",name:"BAHRAIN · SAKHIR",country:"Bahrain",style:"desert",seed:16,weather:"dry",feature:"Desert circuit with heavy braking zones"},
+{id:"jeddah",name:"SAUDI ARABIA · JEDDAH CORNICHE",country:"Saudi Arabia",style:"street",seed:24,weather:"dry",feature:"Fast flowing coastal street circuit"},
 {id:"singapore",name:"SINGAPORE · MARINA BAY",country:"Singapore",style:"night",seed:17,weather:"storm",feature:"Tight illuminated night street circuit"},
 {id:"austin",name:"USA · CIRCUIT OF THE AMERICAS",country:"USA",style:"hills",seed:18,weather:"changeable",feature:"Steep opening climb and flowing esses"},
 {id:"mexico",name:"MEXICO · HERMANOS RODRIGUEZ",country:"Mexico",style:"stadium",seed:19,weather:"dry",feature:"High-altitude stadium section"},

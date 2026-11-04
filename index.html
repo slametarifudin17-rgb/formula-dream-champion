@@ -31,7 +31,7 @@
       <div class="start-panel">
         <div class="eyebrow">MOBILE RACING PROTOTYPE · 0.1</div>
         <h1>FORMULA<br><em>DREAM</em><br>CHAMPION</h1>
-        <p>YOUR RACE. YOUR DREAM. YOUR LEGACY.</p><div id="career-summary" class="career-summary">LV 1 · 0 PTS · 0 CR</div><button id="upgrade-button" class="upgrade-button" type="button">GARAGE · ENGINE UPGRADE · 500 CR</button>
+        <p>YOUR RACE. YOUR DREAM. YOUR LEGACY.</p><div id="career-summary" class="career-summary">LV 1 · 0 PTS · 0 CR</div><button id="upgrade-button" class="upgrade-button" type="button">GARAGE · ENGINE UPGRADE · 500 CR</button><button id="standings-button" class="upgrade-button" type="button">CHAMPIONSHIP STANDINGS</button>
         <div class="race-selectors"><label>MODE<select id="mode-select"><option value="GRAND_PRIX">GRAND PRIX</option><option value="CAREER">CAREER</option><option value="TIME_TRIAL">TIME TRIAL</option><option value="QUALIFYING">QUALIFYING</option></select></label><label>RACE LENGTH<select id="length-select"><option value="3">QUALIFYING · 3 LAPS</option><option value="5">25% · 5 LAPS</option><option value="10">50% · 10 LAPS</option><option value="15">75% · 15 LAPS</option><option value="20">100% · 20 LAPS</option></select></label><label>GRAND PRIX<select id="track-select" aria-label="Select circuit"></select></label><label>WEATHER<select id="weather-select" aria-label="Select weather"><option value="AUTO">AUTO · CIRCUIT PROFILE</option><option value="SUNNY">SUNNY</option><option value="CLOUDY">CLOUDY</option><option value="RAIN">RAIN</option><option value="STORM">HEAVY RAIN</option><option value="DYNAMIC">DYNAMIC WEATHER</option></select></label></div>
         <button id="start-button" class="start-button">START ENGINE <span>›</span></button>
         <small>PROTOTYPE BUILD · ORIGINAL FDC CONCEPT</small>
@@ -49,6 +49,7 @@
       <button id="pit-button" class="control-button pit-button" type="button">PIT</button>
     </div>
     <footer class="footer"><span>FDC DEVELOPMENT BUILD</span><span id="drive-status">READY</span><span>TOUCH / KEYBOARD</span></footer>
+    <div id="standings-panel" class="standings-panel" hidden><div class="standings-card"><div class="standings-heading">FDC · DRIVER CHAMPIONSHIP</div><pre id="standings-list">NO RESULTS</pre><button id="standings-close" class="upgrade-button" type="button">CLOSE</button></div></div>
     <div id="error" class="error" hidden></div>
   </div>
   <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}</script>

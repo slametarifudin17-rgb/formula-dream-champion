@@ -15,7 +15,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - Three.js 3D scene and original greybox open-wheel car.
 - 24 selectable venues: the current 2026 calendar venues plus Bahrain and Jeddah as additional F1-inspired bonus venues. The track shapes are generated FDC approximations, not accurate track reproductions.
 - Basic track-following driving: throttle, brake, steering/lateral offset, track edge penalty, speed/gear/RPM HUD and three-lap session.
-- Up to 23 simple computer-controlled rival cars (24-car grid in Grand Prix/Career; no rivals in Time Trial).\n- Three game modes: Grand Prix, Career (local race/win counters saved in browser storage), and Time Trial.\n- Four race-length presets: 25%, 50%, 75%, and 100% (prototype presets of 5/10/15/20 laps).\n- Basic ERS deployment and DRS proximity/straight-zone boost logic.\n- Live player position calculation against the AI field.
+- Up to 23 simple computer-controlled rival cars (24-car grid in Grand Prix/Career; no rivals in Time Trial).\n- Three game modes: Grand Prix, Career (local race/win counters saved in browser storage), and Time Trial.\n- Four race-length presets: 25%, 50%, 75%, and 100% (prototype presets of 5/10/15/20 laps).\n- Basic ERS deployment, DRS proximity/straight-zone boost logic, tyre wear indicator and manual pit-stop tyre reset.\n- Live player position calculation against the AI field.
 - Weather presets: sunny, cloudy, rain, heavy rain and dynamic wet/dry grip phases.
 - Instanced spectator crowd and simple grandstand placeholders.
 - Chase, TV-style and cockpit camera positions.
@@ -25,7 +25,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - AI rivals are simple pace-following placeholders; no overtaking logic, collision, qualifying or race strategy.
 - Circuit geometry, pit lane, kerbs, elevation, buildings and grandstands are generated approximations, not surveyed replicas.
 - Weather is visual/basic grip simulation only; no puddles, spray simulation, tyre compounds or aquaplaning model.
-- Career is only a local race/win counter; no season calendar, contracts, upgrades, or championship progression.\n- DRS/ERS are simplified prototype boosts, not full FIA rule simulations.\n- No pit stops, tyre compounds/wear, safety car, penalties, damage, qualifying, full championship tables or race strategy yet.
+- Career is only a local race/win counter; no season calendar, contracts, upgrades, or championship progression.\n- DRS/ERS are simplified prototype boosts, not full FIA rule simulations.\n- Pit stop and tyre wear are simplified prototype mechanics; no tyre compounds, tyre temperature, safety car, penalties, damage, qualifying, full championship tables or race strategy yet.
 - Audio is not implemented.
 - Offline startup depends on the browser successfully caching the external Three.js module. First launch requires internet.
 - Performance, touch behavior, and installation must be verified on actual iPhone hardware. No iPhone 11 test has been performed by the developer.

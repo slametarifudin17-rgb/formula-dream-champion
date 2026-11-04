@@ -62,3 +62,6 @@ h1 em{color:var(--red);font-style:italic}
  .controls{bottom:calc(env(safe-area-inset-bottom) + 25px)}
  .steer{width:58px;height:58px}
 }
+
+.camera-button{position:absolute;z-index:4;right:12px;top:calc(env(safe-area-inset-top) + 65px);border:1px solid rgba(255,255,255,.32);border-radius:5px;background:rgba(5,9,15,.62);color:#fff;padding:8px 10px;font-size:7px;letter-spacing:1px;font-weight:800;touch-action:manipulation}
+@media(orientation:landscape) and (max-height:500px){.camera-button{top:calc(env(safe-area-inset-top) + 42px);right:16px;padding:7px 9px}}

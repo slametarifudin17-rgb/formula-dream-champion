@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Formula Dream Champion — mobile formula racing prototype.">
+  <title>FORMULA DREAM CHAMPION</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="game-root">
+    <div id="loading" class="screen-message">FDC · MENYIAPKAN SIRKUIT…</div>
+    <header class="hud">
+      <div class="brand"><span class="brand-mark">FDC</span><span class="brand-name">FORMULA DREAM CHAMPION</span></div>
+      <div class="hud-data">
+        <div class="hud-cell"><span class="hud-label">POS</span><strong id="position">P1</strong></div>
+        <div class="hud-cell"><span class="hud-label">LAP</span><strong id="lap">1 / 3</strong></div>
+        <div class="hud-cell speed-cell"><strong id="speed">0</strong><span class="hud-unit">KM/H</span></div>
+      </div>
+    </header>
+    <div class="track-label">FDC TEST CIRCUIT <span>·</span> FREE PRACTICE</div>
+    <div id="message" class="message">TEKAN START ENGINE UNTUK MULAI</div>
+    <section id="start-screen" class="start-screen">
+      <div class="start-panel">
+        <div class="eyebrow">MOBILE RACING PROTOTYPE · 0.1</div>
+        <h1>FORMULA<br><em>DREAM</em><br>CHAMPION</h1>
+        <p>YOUR RACE. YOUR DREAM. YOUR LEGACY.</p>
+        <button id="start-button" class="start-button">START ENGINE <span>›</span></button>
+        <small>PROTOTYPE BUILD · ORIGINAL FDC CONCEPT</small>
+      </div>
+    </section>
+    <div class="controls" id="controls">
+      <div class="steering">
+        <button class="control-button steer" data-control="left" aria-label="Belok kiri">‹</button>
+        <button class="control-button steer" data-control="right" aria-label="Belok kanan">›</button>
+      </div>
+      <div class="pedals">
+        <button class="control-button brake" data-control="brake">BRAKE</button>
+        <button class="control-button throttle" data-control="throttle">THROTTLE</button>
+      </div>
+    </div>
+    <footer class="footer"><span>FDC DEVELOPMENT BUILD</span><span id="drive-status">READY</span><span>TOUCH / KEYBOARD</span></footer>
+    <div id="error" class="error" hidden></div>
+  </div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

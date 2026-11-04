@@ -13,7 +13,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 
 ## Current implemented prototype systems
 - Three.js 3D scene and original greybox open-wheel car.
-- 24 selectable venues based on the 2026 F1 calendar, with generated FDC track shapes. These are visual approximations, not accurate track reproductions.
+- 24 selectable venues: the current 2026 calendar venues plus Bahrain and Jeddah as additional F1-inspired bonus venues. The track shapes are generated FDC approximations, not accurate track reproductions.
 - Basic track-following driving: throttle, brake, steering/lateral offset, track edge penalty, speed/gear/RPM HUD and three-lap session.
 - Five simple computer-controlled rival cars following the racing line.
 - Weather presets: sunny, cloudy, rain, heavy rain and dynamic wet/dry grip phases.

@@ -15,7 +15,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - Three.js 3D scene and original greybox open-wheel car.
 - 24 selectable venues: the current 2026 calendar venues plus Bahrain and Jeddah as additional F1-inspired bonus venues. The track shapes are generated FDC approximations, not accurate track reproductions.
 - Basic track-following driving: throttle, brake, steering/lateral offset, track edge penalty, speed/gear/RPM HUD and selectable 5/10/15/20-lap session.
-- Up to 23 simple computer-controlled rival cars (24-car grid in Grand Prix/Career; no rivals in Time Trial).
+- Up to 23 computer-controlled rivals with basic lane avoidance (24-car grid in Grand Prix/Career; no rivals in Time Trial).
 - Three game modes: Grand Prix, Career (local race/win counters saved in browser storage), and Time Trial.
 - Four race-length presets: 25%, 50%, 75%, and 100% (prototype presets of 5/10/15/20 laps).
 - Basic ERS deployment, DRS proximity/straight-zone boost logic, tyre wear indicator and manual pit-stop tyre reset.
@@ -27,7 +27,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - iPhone home-screen web app metadata and a service worker that caches the app shell and attempts to cache Three.js for offline use.
 
 ## Remaining roadmap and known limitations
-- AI rivals are simple pace-following placeholders; no overtaking logic, collision, qualifying or race strategy.
+- AI rivals use simplified pace-following and lane avoidance; advanced overtaking, full collision physics, qualifying and race strategy are not implemented.
 - Circuit geometry, pit lane, kerbs, elevation, buildings and grandstands are generated approximations, not surveyed replicas.
 - Weather is visual/basic grip simulation only; no puddles, spray simulation, tyre compounds or aquaplaning model.
 - Career is only a local race/win counter; no season calendar, contracts, upgrades, or championship progression.

@@ -31,3 +31,10 @@ FDC is an original, mobile-first formula racing game prototype. This first build
 
 ## IP note
 Use original or properly licensed cars, logos, team identities, driver likenesses, circuit layouts and championship marks for public/commercial releases.
+
+
+## Grand Prix environments (prototype expansion)
+
+The prototype now includes a selectable 2026-inspired Grand Prix catalogue with 23 venues, per-venue layout profiles, circuit atmosphere, instanced spectator crowds and grandstands. Weather presets include sunny, cloudy, rain, heavy rain and a dynamic profile; circuit profiles can also suggest a default weather type.
+
+**Important:** the current 3D layouts are generated approximations, not surveyed or laser-scanned reproductions. Track elevation, kerbs, pit buildings, exact corner radii, real-world crowd animation and realistic wet-weather tyre physics are not implemented yet. The 2026 venue list is based on the published Formula 1 calendar; the game uses original FDC geometry and placeholder environments rather than official licensed assets.

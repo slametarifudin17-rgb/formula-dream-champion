@@ -12,18 +12,19 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 5. Hold THROTTLE, steer with left/right and use BRAKE. Camera button cycles chase, TV and cockpit views.
 
 ## Current implemented prototype systems
-- Three.js 3D scene and original greybox open-wheel car.
+- Three.js 3D scene and original original detailed open-wheel car with custom cockpit geometry.
 - 24 selectable venues: the current 2026 calendar venues plus Bahrain and Jeddah as additional F1-inspired bonus venues. The track shapes are generated FDC approximations, not accurate track reproductions.
 - Basic track-following driving: throttle, brake, steering/lateral offset, track edge penalty, speed/gear/RPM HUD and selectable 5/10/15/20-lap session.
 - Up to 23 computer-controlled rivals with basic lane avoidance (24-car grid in Grand Prix/Career; no rivals in Time Trial).
-- Three game modes: Grand Prix, Career (local race/win counters saved in browser storage), and Time Trial.
+- Four game modes: Grand Prix, Career (local championship progression), Time Trial and Qualifying (three-lap best-time session).
 - Four race-length presets: 25%, 50%, 75%, and 100% (prototype presets of 5/10/15/20 laps).
 - Basic ERS deployment, DRS proximity/straight-zone boost logic, tyre wear indicator and manual pit-stop tyre reset.
 - Live player position calculation against the AI field.
 - Weather presets: sunny, cloudy, rain, heavy rain and dynamic wet/dry grip phases.
 - Instanced spectator crowd and simple grandstand placeholders.
-- Procedural synthesized engine tone and basic off-track damage/pace degradation.
-- Chase, TV-style and cockpit camera positions, with a detailed FDC steering wheel, digital display, control buttons, driver arms, seat and halo.\n- Basic 3D safety car with flashing lights, reduced field pace, track-limits warnings and accumulated post-race time penalties.\n- Qualifying mode with best-lap timing and locally saved results.\n- Career championship points, wins, race count and a 10-round season counter stored locally.
+- Procedural synthesized multi-layer engine tone and basic tyre-squeal effect and basic off-track damage/pace degradation.
+- Chase, TV-style and cockpit camera positions, with a detailed FDC steering wheel, digital display, control buttons, driver arms, seat and halo.
+- Basic 3D safety car with flashing lights, reduced field pace, track-limits warnings and accumulated post-race time penalties.\n- Qualifying mode with best-lap timing and locally saved results.\n- Career championship points, wins, race count and a 10-round season counter stored locally.
 - iPhone home-screen web app metadata and a service worker that caches the app shell and attempts to cache Three.js for offline use.
 
 ## Remaining roadmap and known limitations

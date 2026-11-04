@@ -6,6 +6,9 @@ const errorBox = $("error");
 const startScreen = $("start-screen");
 const controlsEl = $("controls");
 const speedEl = $("speed");
+const gearEl = $("gear");
+const rpmEl = $("rpm");
+const cameraButton = $("camera-button");
 const lapEl = $("lap");
 const messageEl = $("message");
 const driveStatus = $("drive-status");
@@ -18,6 +21,9 @@ let lap = 1;
 let lastAngle = 0;
 let lapArmed = false;
 let steerInput = 0;
+let cameraMode = 0;
+const cameraModes = ["CHASE", "TV", "COCKPIT"];
+const activeControls = new Set();
 let throttleInput = false;
 let brakeInput = false;
 let lastTime = 0;
@@ -223,8 +229,7 @@ function bindControls() {
     const down = (event) => {
       event.preventDefault();
       button.classList.add("pressed");
-      if (control === "left") steerInput = -1;
-      if (control === "right") steerInput = 1;
+      activeControls.add(control);
       if (control === "throttle") throttleInput = true;
       if (control === "brake") brakeInput = true;
       try { button.setPointerCapture(event.pointerId); } catch (_) {}
@@ -232,9 +237,9 @@ function bindControls() {
     const up = (event) => {
       event.preventDefault();
       button.classList.remove("pressed");
-      if (control === "left" || control === "right") steerInput = 0;
-      if (control === "throttle") throttleInput = false;
-      if (control === "brake") brakeInput = false;
+      activeControls.delete(control);
+      throttleInput = activeControls.has("throttle");
+      brakeInput = activeControls.has("brake");
     };
     button.addEventListener("pointerdown", down);
     button.addEventListener("pointerup", up);
@@ -248,93 +253,8 @@ function bindControls() {
   });
   window.addEventListener("keyup", e => { keys[e.code] = false; });
   $("start-button").addEventListener("click", startRace);
-}
-
-function startRace() {
-  if (started) return;
-  started = true;
-  startScreen.style.display = "none";
-  controlsEl.classList.add("active");
-  messageEl.textContent = "GREEN FLAG · GO GO GO";
-  driveStatus.textContent = "RACING";
-  setTimeout(() => { if (messageEl) messageEl.textContent = "FREE PRACTICE"; }, 2200);
-}
-
-function updateCar(dt) {
-  if (!started) {
-    speed = Math.max(0, speed - 18 * dt);
-    return;
-  }
-  const throttle = throttleInput || keys.ArrowUp || keys.KeyW;
-  const brake = brakeInput || keys.ArrowDown || keys.KeyS;
-  let steer = steerInput;
-  if (keys.ArrowLeft || keys.KeyA) steer = -1;
-  if (keys.ArrowRight || keys.KeyD) steer = 1;
-
-  if (throttle) speed += 30 * dt;
-  else speed -= 5.5 * dt;
-  if (brake) speed -= 52 * dt;
-  speed = THREE.MathUtils.clamp(speed, 0, maxSpeed);
-
-  const steeringScale = THREE.MathUtils.clamp(speed / 24, 0.25, 1);
-  yaw += steer * steeringScale * 1.05 * dt * (speed > 1 ? 1 : 0);
-
-  carPosition.x += Math.sin(yaw) * speed * dt;
-  carPosition.z += Math.cos(yaw) * speed * dt;
-  car.position.copy(carPosition);
-  car.rotation.y = yaw;
-
-  const angle = Math.atan2(carPosition.x / trackRX, carPosition.z / trackRZ);
-  const normalized = angle < 0 ? angle + Math.PI * 2 : angle;
-  if (normalized > 5.7) lapArmed = true;
-  if (lapArmed && lastAngle > 5.7 && normalized < 0.55) {
-    lap++;
-    lapArmed = false;
-    lapEl.textContent = Math.min(lap, 3) + " / 3";
-    messageEl.textContent = lap > 3 ? "SESSION COMPLETE" : "NEW LAP";
-    if (lap > 3) {
-      started = false;
-      driveStatus.textContent = "FINISHED";
-    }
-  }
-  lastAngle = normalized;
-
-  const normalizedTrack = (carPosition.x * carPosition.x) / (trackRX * trackRX) +
-    (carPosition.z * carPosition.z) / (trackRZ * trackRZ);
-  if (normalizedTrack > 1.23) {
-    speed *= Math.max(0, 1 - 0.7 * dt);
-    driveStatus.textContent = "OFF TRACK";
-  } else {
-    driveStatus.textContent = brake ? "BRAKING" : throttle ? "FULL THROTTLE" : "RACING";
-  }
-  speedEl.textContent = Math.round(speed * 3.6).toString();
-}
-
-function updateCamera(dt) {
-  if (!car || !camera) return;
-  const offset = new THREE.Vector3(0, 6.4, -13.5).applyAxisAngle(new THREE.Vector3(0,1,0), yaw);
-  const desired = carPosition.clone().add(offset);
-  desired.y += 1.0;
-  camera.position.lerp(desired, Math.min(1, dt * 4.5));
-  const lookAt = carPosition.clone().add(new THREE.Vector3(0, 1.1, 0));
-  camera.lookAt(lookAt);
-}
-
-function animate(timestamp) {
-  requestAnimationFrame(animate);
-  const dt = Math.min((timestamp - (lastTime || timestamp)) / 1000, 0.04);
-  lastTime = timestamp;
-  elapsed += dt;
-  updateCar(dt);
-  updateCamera(dt);
-  if (renderer && scene && camera) renderer.render(scene, camera);
-}
-
-try {
-  setup();
-} catch (error) {
-  loading.classList.add("hidden");
-  errorBox.hidden = false;
-  errorBox.textContent = "FDC tidak dapat memulai WebGL: " + error.message;
-  console.error(error);
+  cameraButton.addEventListener("click", () => {
+    cameraMode = (cameraMode + 1) % cameraModes.length;
+    cameraButton.textContent = "CAM · " + cameraModes[cameraMode];
+  });
 }

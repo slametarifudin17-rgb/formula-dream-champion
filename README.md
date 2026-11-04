@@ -24,16 +24,18 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 - Instanced spectator crowd and simple grandstand placeholders.
 - Procedural synthesized multi-layer engine tone and basic tyre-squeal effect and basic off-track damage/pace degradation.
 - Chase, TV-style and cockpit camera positions, with a detailed FDC steering wheel, digital display, control buttons, driver arms, seat and halo.
-- Basic 3D safety car with flashing lights, reduced field pace, track-limits warnings and accumulated post-race time penalties.\n- Qualifying mode with best-lap timing and locally saved results.\n- Career championship points, wins, race count and a 10-round season counter stored locally.
+- Basic 3D safety car with flashing lights, reduced field pace, track-limits warnings and accumulated post-race time penalties.
+- Qualifying mode with best-lap timing and locally saved results.
+- Career championship points, wins, race count and a 10-round season counter stored locally.
 - iPhone home-screen web app metadata and a service worker that caches the app shell and attempts to cache Three.js for offline use.
 
 ## Remaining roadmap and known limitations
-- AI rivals use simplified pace-following and lane avoidance; advanced overtaking, full collision physics, qualifying and race strategy are not implemented.
+- AI rivals use simplified corner-aware pace and lane avoidance; advanced overtaking, full collision physics and race strategy are not implemented.
 - Circuit geometry, pit lane, kerbs, elevation, buildings and grandstands are generated approximations, not surveyed replicas.
 - Weather is visual/basic grip simulation only; no puddles, spray simulation, tyre compounds or aquaplaning model.
-- Career is only a local race/win counter; no season calendar, contracts, upgrades, or championship progression.
+- Career includes locally saved championship points, race wins, driver XP/levels, credits and up to three engine upgrades. Contracts, transfers and a full AI driver championship remain future work.
 - DRS/ERS are simplified prototype boosts, not full FIA rule simulations.
-- Pit stop and tyre wear are simplified prototype mechanics; no tyre compounds, tyre temperature, safety car, penalties, qualifying, full championship tables or race strategy yet.
+- Pit stop, tyre wear, safety car and track-limit penalties are simplified prototype mechanics; no tyre compounds, tyre temperature, full championship tables or race strategy yet.
 - Procedural synthesized engine tone and basic off-track damage are implemented; tyre, wind, crowd, pit crew and radio audio are not yet implemented.
 - Offline startup depends on the browser successfully caching the external Three.js module. First launch requires internet.
 - Performance, touch behavior, and installation must be verified on actual iPhone hardware. No iPhone 11 test has been performed by the developer.

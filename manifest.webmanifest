@@ -1,0 +1,12 @@
+{
+  "name":"FORMULA DREAM CHAMPION",
+  "short_name":"FDC",
+  "description":"Original mobile formula racing game prototype",
+  "start_url":"./",
+  "scope":"./",
+  "display":"fullscreen",
+  "orientation":"landscape",
+  "background_color":"#080b12",
+  "theme_color":"#080b12",
+  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

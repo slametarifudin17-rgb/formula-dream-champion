@@ -12,7 +12,7 @@ FDC is an original formula racing game prototype designed for iPhone Safari in l
 5. Hold THROTTLE, steer with left/right and use BRAKE. Camera button cycles chase, TV and cockpit views.
 
 ## Current implemented prototype systems
-- Three.js 3D scene and original detailed open-wheel car with custom cockpit geometry.
+- Three.js 3D scene and original open-wheel car with custom cockpit geometry and team-based selectable livery.\n- 12 original fictional constructors and a 24-driver roster, including Garvion Racing as the 12th team; choose a team before each session. AI opponents inherit their assigned team colors.
 - 24 selectable venues: the current 2026 calendar venues plus Bahrain and Jeddah as additional F1-inspired bonus venues. The track shapes are generated FDC approximations, not accurate track reproductions.
 - Basic track-following driving: throttle, brake, steering/lateral offset, track edge penalty, speed/gear/RPM HUD and selectable 5/10/15/20-lap race distances (plus 3-lap qualifying).
 - Up to 23 computer-controlled rivals with basic lane avoidance (24-car grid in Grand Prix/Career; no rivals in Time Trial).

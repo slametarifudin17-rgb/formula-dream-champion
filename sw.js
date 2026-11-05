@@ -1,5 +1,5 @@
-const CACHE="fdc-shell-v3";
-const CORE=["./","./index.html","./style.css","./game.js","./circuits.js","./manifest.webmanifest","./icon.svg"];
+const CACHE="fdc-shell-v4";
+const CORE=["./","./index.html","./style.css","./game.js","./circuits.js","./teams.js","./manifest.webmanifest","./icon.svg"];
 const THREE="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js";
 self.addEventListener("install",event=>event.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(CORE);try{await c.add(THREE);}catch(e){}await self.skipWaiting();})()));
 self.addEventListener("activate",event=>event.waitUntil((async()=>{for(const k of await caches.keys())if(k!==CACHE)await caches.delete(k);await self.clients.claim();})()));
